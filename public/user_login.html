@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/user_login.css">
+</head>
+<body>
+	<div class='login_box'>
+		<div class='login_left'>
+			<ul class='login_left_list'>
+				<li class='left_list_item item-margin'>登录</li>
+				<li class='left_list_item item-margin'>
+					<input type="text" placeholder='用户名' id='uname'>
+				</li>
+				<li class='left_list_item item-margin'>
+					<input type="password" placeholder='密码' id='upwd'>
+				</li>
+				<li class='left_list_item item-margin'>
+					<input type="checkbox"><span>记住我</span>
+					<a href="javascript:;">忘记密码?</a>
+				</li>
+				<li class='left_list_item item-margin'>
+					<button onclick='user_login()'>登录</button>
+				</li>
+			</ul>
+		</div>
+		<div class='login_right'>
+			<ul>
+				<li class='left_right_item item-margin'>使用以下账号直接登录</li>
+				<li class='left_right_item item-margin'>
+					<a href="javascript:;">qq注册</a>	
+				</li>
+				<li class='left_right_item item-margin'>
+					<a href="javascript:;">微博注册</a>
+				</li>
+				<li class='left_right_item item-margin'>
+					<a href="javascript:;">微信注册</a>
+				</li>
+				<li class='left_right_item item-margin'>
+					没有账号?
+					<a href="user_reg.html">立即注册</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script>
+		function user_login(){
+			var u_name=uname.value;
+			var u_pwd=upwd.value;
+			var xhr = new XMLHttpRequest();
+			xhr.onreadystatechange = function(){
+				if(xhr.readyState==4 && xhr.status==200){
+					var result = xhr.responseText;
+					if(result==1){
+						alert('登陆成功');
+					}else if(result==0){
+						alert('用户名或密码错误');
+					}else{
+						alert('账户或密码不能为空');
+					}
+				}
+			}
+			var url='http://127.0.0.1:8080/user/login';
+			xhr.open('post',url,true);
+			var formdata='uname='+u_name+'&upwd='+u_pwd;
+			xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+			xhr.send(formdata);
+		}
+	</script>
+</body>
+</html>

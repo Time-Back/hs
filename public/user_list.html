@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body onload='show()'>
+	<table border='1px'>
+		<thead>
+			<tr>
+				<th>用户名称</th>
+				<th>用户密码</th>
+				<th>用户邮箱</th>
+				<th>用户手机</th>
+				<th>真实姓名</th>
+				<th>性别</th>
+				<th>注册时间</th>
+				<th>操作</th>
+			</tr>		
+		</thead>
+		<tbody id='content'></tbody>
+	</table>
+	<script>
+		function show(){
+			var xhr=new XMLHttpRequest();
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4 && xhr.status==200){
+					var result=xhr.responseText;
+					var arr=JSON.parse(result);
+					for(var i=0;i<arr.length;i++){
+						if(arr[i].gender==0){
+							arr[i].gender='女';
+						}else if(arr[i].gender==1){
+							arr[i].gender='男';
+						}else{
+							arr[i].gender='不详';
+						}
+						content.innerHTML += `
+							<tr>
+								<td>${arr[i].uname}</td>
+								<td>${arr[i].upwd}</td>
+								<td>${arr[i].email}</td>
+								<td>${arr[i].phone}</td>
+								<td>${arr[i].user_name}</td>
+								<td>${arr[i].gender}</td>
+								<td>${arr[i].reg_time}</td>
+								<td>
+										<a href="javascript:user_delete(${arr[i].uid})">删除</a>
+										<a href="user_update.html?uid=${arr[i].uid}">修改</a>
+								</td>
+							</tr>
+						`
+					}
+				}
+			}
+			xhr.open('get','http://127.0.0.1:8080/user/list',true);
+			xhr.send();
+		}
+		function user_delete(u_id){
+			var xhr = new XMLHttpRequest();
+			xhr.onreadystatechange = function(){
+				if(xhr.readyState==4 && xhr.status==200){
+					var result = xhr.responseText;
+					alert(result);
+					location.href='http://127.0.0.1:8080/user_list.html';
+				}
+			}
+			xhr.open('get','http://127.0.0.1:8080/user/delete?uid='+u_id,true);
+			xhr.send();
+		}
+	</script>
+</body>
+</html>

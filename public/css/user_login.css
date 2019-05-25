@@ -1,0 +1,24 @@
+*{								/*外边距内边距为0*/
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration:none;		/*a标签无下划线*/
+}
+ul,ol,li{
+	list-style:none;			/*有序或无序,没有前面的·*/
+}
+.login_box{
+	width:500px;
+	margin:auto;
+	margin-top:200px;
+}
+.login_left{
+	float:left;
+}
+.login_right{
+	float:right;
+}
+.item-margin{
+	margin-top:20px;
+}
