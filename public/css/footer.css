@@ -1,37 +1,40 @@
-/* 底部 */
-.footer{
-	width:100%;
-	height:280px;
-	background-color:#808080;
+/* 网页底部 */
+#footer {
+  min-width: 1240px;
+  height: 240px;
+  background-color: #808080;
 }
-.footer-top{
-	width: 80%;
-    height: 120px;
-    margin: 0 auto;
-	text-align:center;
+/* 上部分 */
+#footer > .top {
+  width: 130px;
+  height: 80px;
+  margin: 0 auto;
+  background-image: url("../img/index/logo.png");
+  background-repeat: no-repeat;
+	background-size:cover;
 }
-.footer-center>ul{
-	width:30%;
-	height:26px;
-	margin:0 auto;
-	display:flex;
-	justify-content:space-around;
+/* 中间部分 */
+#footer > .center > ul {
+  width: 400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
-.footer-center>ul>li>a:hover{
-	color:#000;
+#footer > .center > ul > li > a:hover {
+  color: #ccc;
 }
-.footer-center>ul>li>a,span{
-	color:#fff;
-	font-size:20px;
+#footer > .center > ul > li > a,span {
+  font-size: 15px;
+  color: #fff;
 }
-.footer-bottom{
-	width:80%;
-	height:114px;
-	margin:0 auto;
-	text-align:center;
+/* 下部分 */
+#footer > .bottom {
+  width: 1240px;
+  margin: 0 auto;
+  text-align: center;
 }
-.footer-bottom p{
-	font:15px;
-    color:#fff;
-	margin-top:20px;
+#footer > .bottom p {
+  font-size: 15px;
+  color: #fff;
+  margin-top: 15px;
 }

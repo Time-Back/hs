@@ -1,168 +1,320 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>首页</title>
-	<!-- 设置视口 -->
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <!-- 导入css -->
-    <link rel="stylesheet" href="css/bootstrap.css"/>
-    <!-- 导入三个js,有顺序要求 -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/index.js"></script>
-	<link rel="stylesheet" href="css/comm.css">
-	<link rel="stylesheet" href="css/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>主页</title>
+    <!-- 引入相关css样式 -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-	<!-- 引入头部 -->
-	<header>
-		<iframe src="header.html" frameborder="0" scrolling='no' id="header"></iframe>
-	</header>
-	<div>
-		<!-- 主体 -->
-		<section class='section'>
-			<!-- 搜索框 -->
-			<div class='section_search'>
-				<ul>
-					<li class='item'>
-						<input type="text" class='search' placeholder='请输入您要查询的商品'>
-					</li>
-					<li class='item'><button>查询</button></li>
-				</ul>	
-			</div>
-			<!-- 轮播图 -->
-			<div class="container">
-				<!-- 焦点轮播图 -->
-					<div class="carousel" data-ride="carousel" id="demo">
-					<!-- 1.轮播图片 -->
-					<div class="carousel-inner">
-						<div class="carousel-item active">
-							<img src="img/index/banner_1.jpg" alt="" class="w-100"/>
-						</div>
-						<div class="carousel-item">
-							<img src="img/index/banner_2.jpg" alt="" class="w-100"/>
-						</div>
-						<div class="carousel-item">
-							<img src="img/index/banner_3.jpg" alt="" class="w-100"/>
-						</div>
-						<div class="carousel-item">
-							<img src="img/index/banner_4.jpg" alt="" class="w-100"/>
-						</div>
-						<div class="carousel-item">
-							<img src="img/index/banner_5.jpg" alt="" class="w-100"/>
-						</div>
-					</div>
-						<!-- 2.轮播箭头 -->
-						<a href="#demo" class="carousel-control-prev" data-slide="prev">
-							<span class="carousel-control-prev-icon"></span>
-						</a>
-						<a href="#demo" class="carousel-control-next" data-slide="next">
-							<span class="carousel-control-next-icon"></span>
-						</a>
-						<!-- 3.轮播指示器 -->
-						<ul class="carousel-indicators">
-							<li data-slide-to="0" data-target="#demo" class="active"></li>
-							<li data-slide-to="1" data-target="#demo"></li>
-							<li data-slide-to="2" data-target="#demo"></li>
-							<li data-slide-to="3" data-target="#demo"></li>
-							<li data-slide-to="4" data-target="#demo"></li>
-						</ul>
-					</div>
-			</div>
-			<!-- 样照 -->
-			<div class='row m-0 sample'>
-				<div class="col-4 p-0 pl-2">
-					<div class="left-top ">
-						<img src="img/index/sample_1.jpg" alt="" class="a"/>
-						<p class='a1'>梦中婚礼<br>Dream Wedding</p>
-					</div>
-					<div class="left-bottom ">
-						<img src="img/index/sample_2.jpg" alt="" />
-						<p>完美假期<br>Perfect Holiday</p>
-					</div>
-				</div>
-				<div class="col-4 p-0 pl-0.5">
-					<div class="center">
-						<img src="img/index/sample_3.jpg" alt="" />
-						<p>天生一对<br>Prefect Couple</p>
-					</div>
-				</div>
-				<div class="col-4 p-0 pl-1">
-					<div class="right-top">
-						<img src="img/index/sample_4.jpg" alt="" />
-						<p>丛林物语<br>Jungle Mist</p>
-					</div>
-					<div class="right-bottom">
-						<img src="img/index/sample_5.jpg" alt="" />
-						<p>漫步时光<br>Warking Time</p>
-					</div>
-				</div>
-			</div>
-			<!-- 场馆 -->
-			<div>
-				<!-- 标题 -->
-				<div class='venue-title'>六·大·场·馆</div>
-				<!-- 图片 -->
-				<div class='venue-photos'>
-					<div>
-						<img src="img/index/cd1.jpg" alt=""  class="cd"/>
-						<img src="img/index/cd-bg.png" alt="" class="cd-bg"/>
-						<p>弥花馆</p>
-					</div>
-					<div>
-						<img src="img/index/cd2.jpg" alt=""  class="cd"/>
-						<img src="img/index/cd-bg.png" alt="" class="cd-bg"/>
-						<p>雅颂馆</p>
-					</div>
-					<div>
-						<img src="img/index/cd3.jpg" alt="" class='cd'/>
-						<img src="img/index/cd-bg.png" alt="" class="cd-bg"/>
-						<p>皇冠馆</p>
-					</div>
-					<div>
-						<img src="img/index/cd4.jpg" alt="" class='cd'/>
-						<img src="img/index/cd-bg.png" alt="" class="cd-bg"/>
-						<p>巴比伦<br>馆</p>
-					</div>
-					<div>
-						<img src="img/index/cd5.jpg" alt="" class='cd'/>
-						<img src="img/index/cd-bg.png" alt="" class="cd-bg"/>
-						<p>韩国馆</p>
-					</div>
-					<div>
-						<img src="img/index/cd6.jpg" alt="" class='cd'/>
-						<img src="img/index/cd-bg.png" alt="" class="cd-bg"/>
-						<p>维纳馆</p>
-					</div>
-				</div>
-			</div>
-			<!-- 侧边栏 -->
-			<div class='sidebar'>
-				<ul>
-					<li>
-						<a href="javascript:;">顶&nbsp;&nbsp;&nbsp;&nbsp;部</a>
-					</li>
-					<li>
-						<a href="javascript:;">全新样照</a>
-					</li>
-					<li>
-						<a href="javascript:;">场馆介绍</a>
-					</li>
-					<li>
-						<a href="javascript:;">人气外景</a>
-					</li>
-					<li>
-						<a href="javascript:;">客照欣赏</a>
-					</li>
-				</ul>
-			</div>
-		</section>
-	</div>
-	<!-- 引入底部 -->
-	<footer>
-		<iframe src="footer.html" frameborder="0" scrolling='no' style="width: 100%; height: 280px;"></iframe>
-	</footer>
+    <!-- 网页头部 -->
+    <header id="header"></header>
+    <!-- 网页主体 -->
+    <main id="main">
+        <!-- 搜索框 -->
+        <div id="search">
+            <ul>
+                <li>
+                    <input type="text" placeholder='请输入您要查询的商品'>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="img/index/search.png">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- 轮播图 -->
+        <div id="banner">
+            <div id="btn-left"></div>
+            <ul id="ul-imgs">
+                <li><a href="javascript:;"><img src="img/index/banner_1.jpg"></a></li>
+                <li><a href="javascript:;"><img src="img/index/banner_2.jpg"></a></li>
+                <li><a href="javascript:;"><img src="img/index/banner_3.jpg"></a></li>
+                <li><a href="javascript:;"><img src="img/index/banner_4.jpg"></a></li>
+                <li><a href="javascript:;"><img src="img/index/banner_5.jpg"></a></li>
+                <!-- 最后li个数要比实际图片张数多1，最后一个li里的img是重复第一张li的图片 -->
+                <li><a href="javascript:;"><img src="img/index/banner_1.jpg"></a></li>
+            </ul>
+            <ul id="ul-idxs">
+                <!--虽然li个数比实际图片张数多1，但小圆点的个数不必多1-->
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <div id="btn-right"></div>
+        </div>
+        <!-- 样照 -->
+        <div id="sample">
+            <!-- 样照大图 -->
+            <div id="sample-big">
+                <div>
+                    <span>A</span>
+                    <span>M</span>
+                    <span>P</span>
+                    <span>L</span>
+                    <span>E</span>&nbsp;
+                    <span>P</span>
+                    <span>H</span>
+                    <span>O</span>
+                    <span>T</span>
+                    <span>O</span>
+                    <span>S</span>
+                    <span>S</span>
+                </div>
+                <a href="javascript:;">more</a>
+            </div>
+            <!-- 样照小图 -->
+            <div id="sample-small">
+                <div>
+                    <dl>
+                        <dt>
+                            <img src="img/index/sample_1.jpg">
+                        </dt>
+                        <dd>
+                            <p>
+                                梦中婚礼<br>Dream Wedding
+                            </p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <img src="img/index/sample_2.jpg">
+                        </dt>
+                        <dd>
+                            <p>
+                                完美假期<br>Perfect Holiday
+                            </p>
+                        </dd>
+                    </dl>
+                </div>
+                <div>
+                    <dl>
+                        <dt>
+                            <img src="img/index/sample_3.jpg">
+                        </dt>
+                        <dd>
+                            <p>
+                                天生一对<br>Perfect Couple
+                            </p>
+                        </dd>
+                    </dl>
+                </div>
+
+                <div>
+                    <dl>
+                        <dt>
+                            <img src="img/index/sample_4.jpg">
+                        </dt>
+                        <dd>
+                            <p>
+                                丛林物语<br>Jungle Mist
+                            </p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <img src="img/index/sample_5.jpg">
+                        </dt>
+                        <dd>
+                            <p>
+                                漫步时光<br>Walking Time
+                            </p>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <!-- 场馆 -->
+        <div id="venue">
+            <!-- 标题 -->
+            <div class='venue-title'>场·馆·介·绍</div>
+            <!-- 图片 -->
+            <div class='venue-photos'>
+                <div>
+                    <img src="img/index/cd1.jpg" alt="" class="cd" />
+                    <img src="img/index/cd-bg.png" alt="" class="cd-bg" />
+                    <p>弥花馆</p>
+                </div>
+                <div>
+                    <img src="img/index/cd2.jpg" alt="" class="cd" />
+                    <img src="img/index/cd-bg.png" alt="" class="cd-bg" />
+                    <p>雅颂馆</p>
+                </div>
+                <div>
+                    <img src="img/index/cd3.jpg" alt="" class='cd' />
+                    <img src="img/index/cd-bg.png" alt="" class="cd-bg" />
+                    <p>皇冠馆</p>
+                </div>
+                <div>
+                    <img src="img/index/cd4.jpg" alt="" class='cd' />
+                    <img src="img/index/cd-bg.png" alt="" class="cd-bg" />
+                    <p>巴比伦馆</p>
+                </div>
+                <div>
+                    <img src="img/index/cd5.jpg" alt="" class='cd' />
+                    <img src="img/index/cd-bg.png" alt="" class="cd-bg" />
+                    <p>韩国馆</p>
+                </div>
+                <div>
+                    <img src="img/index/cd6.jpg" alt="" class='cd' />
+                    <img src="img/index/cd-bg.png" alt="" class="cd-bg" />
+                    <p>维纳馆</p>
+                </div>
+            </div>
+        </div>
+        <!-- 外景栏 -->
+        <div id="outdoor">
+            <!-- 标题 -->
+            <div class='outdoor-title'>人·气·外·景</div>
+            <!-- 照片 -->
+            <div class="outdoor-photos">
+                <div>
+                    <img src="img/index/o1.png">
+                    <div class="box"></div>
+                    <div class="text">
+                        <h3>皇家城堡之水晶教堂</h3>
+                        <p>承载所有梦幻想象的魅力天堂</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="img/index/o2.png">
+                    <div class="box"></div>
+                    <div class="text">
+                        <h3>塞纳河畔</h3>
+                        <p>法式轻奢江边景</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="img/index/o3.png">
+                    <div class="box"></div>
+                    <div class="text">
+                        <h3>巴比伦花海</h3>
+                        <p>365天花期不断档的人间仙境</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="img/index/o4.png">
+                    <div class="box"></div>
+                    <div class="text">
+                        <h3>苏格兰马道</h3>
+                        <p>给你油画般的英伦骑士范</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="img/index/o5.png">
+                    <div class="box"></div>
+                    <div class="text">
+                        <h3>欧陆·戛纳明星广场</h3>
+                        <p>巨资打造欧陆华丽明星广场</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="img/index/o6.png">
+                    <div class="box"></div>
+                    <div class="text">
+                        <h3>台山海景· 浪琴湾</h3>
+                        <p>绝美的弧形海岸线让你领略真正的碧海蓝天</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 客照栏 -->
+        <div id="guest">
+            <!-- 标题 -->
+            <div class="guest-title">客·照·欣·赏</div>
+            <!-- 照片 -->
+            <div class="guest-photos">
+                <ul>
+                    <li class="guest-big">
+                        <img src="img/index/guest1.jpg">
+                        <div class="shadow"></div>
+                        <div class="draw">
+                            <p class="l1"></p>
+                            <p class="l2"></p>
+                            <p class="l3"></p>
+                            <p class="l4"></p>
+                            <h1>A先生 &amp; A女士</h1>
+                        </div>
+                    </li>
+                    <li class="guest-small">
+                        <img src="img/index/guest2.jpg">
+                        <div class="shadow"></div>
+                        <div class="draw">
+                            <p class="l1"></p>
+                            <p class="l2"></p>
+                            <p class="l3"></p>
+                            <p class="l4"></p>
+                            <h3>A先生 &amp; A女士</h3>
+                        </div>
+                    </li>
+                    <li class="guest-small">
+                        <img src="img/index/guest3.jpg">
+                        <div class="shadow"></div>
+                        <div class="draw">
+                            <p class="l1"></p>
+                            <p class="l2"></p>
+                            <p class="l3"></p>
+                            <p class="l4"></p>
+                            <h3>A先生 &amp; A女士</h3>
+                        </div>
+                    </li>
+                    <li class="guest-small">
+                        <img src="img/index/guest4.jpg">
+                        <div class="shadow"></div>
+                        <div class="draw">
+                            <p class="l1"></p>
+                            <p class="l2"></p>
+                            <p class="l3"></p>
+                            <p class="l4"></p>
+                            <h3>A先生 &amp; A女士</h3>
+                        </div>
+                    </li>
+                    <li class="guest-small">
+                        <img src="img/index/guest5.jpg">
+                        <div class="shadow"></div>
+                        <div class="draw">
+                            <p class="l1"></p>
+                            <p class="l2"></p>
+                            <p class="l3"></p>
+                            <p class="l4"></p>
+                            <h3>A先生 &amp; A女士</h3>
+                        </div>
+                    </li>
+                    <li class="guest-big">
+                        <img src="img/index/guest6.jpg">
+                        <div class="shadow"></div>
+                        <div class="draw">
+                            <p class="l1"></p>
+                            <p class="l2"></p>
+                            <p class="l3"></p>
+                            <p class="l4"></p>
+                            <h1>A先生 &amp; A女士</h1>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 右侧侧边栏 -->
+        <div id="right-nav">
+            <a href="#header" class="light">顶&nbsp;&nbsp;部</a>
+            <a href="#sample" class="">全新样照</a>
+            <a href="#venue" class="">场馆介绍</a>
+            <a href="#outdoor" class="">人气外景</a>
+            <a href="#guest" class="">客照欣赏</a>
+        </div>
+    </main>
+    <!-- 网页底部 -->
+    <footer id="footer"></footer>
+    <!-- 引入相关js文件 -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/banner.js"></script>
 </body>
 </html>

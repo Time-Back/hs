@@ -1,36 +1,11 @@
-	$(document).ready(function(){
-		$(".a").hover(function(){
-			$(".a1").show();
-		},function(){
-			$(".a1").hide();
-		});
-		$(".a1").hover(function(){
-			$(".a1").show();
-		},function(){
-			$(".a1").hide();
-		});
-	})
-	$(document).ready(function(){
-		$(".b").hover(function(){
-			$(".b1").show();
-		},function(){
-			$(".b1").hide();
-		});
-		$(".b1").hover(function(){
-			$(".b1").show();
-		},function(){
-			$(".b1").hide();
-		});
-	})
-	$(document).ready(function(){
-		$(".c").hover(function(){
-			$(".c1").show();
-		},function(){
-			$(".c1").hide();
-		});
-		$(".c1").hover(function(){
-			$(".c1").show();
-		},function(){
-			$(".c1").hide();
-		});
-	})
+/*********  jQuery引入网页头部文件  *********/
+$(function () {
+    $.ajax({
+        url: "header.html",
+        type: "get",
+        success: function (result) {
+            $(result).replaceAll("header");
+            $(`<link rel="stylesheet" href="css/header.css">`).appendTo("head");
+        }
+    })
+})

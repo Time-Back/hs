@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/reg.css">
+</head>
+
+<body>
+    <!-- 网页头部 -->
+    <header id="header"></header>
+    <!-- 注册页面 -->
+    <main id="reg">
+        <div class="reg_left"></div>
+        <div class="reg_right">
+            <ul>
+                <li>
+                    <h2>用户名</h2>
+                    <input type="text" id='uname' placeholder='请输入用户名'>
+                    <span id='s1'>用户名提示</span>
+                </li>
+                <li>
+                    <h2>密码</h2>
+                    <input type="password" id='upwd' placeholder='请输入密码'>
+                    <span id='s2'>密码提示</span>
+                </li>
+                <li>
+                    <h2>确认密码</h2>
+                    <input type="password" id='cpwd' placeholder='请再次输入密码'>
+                    <span id='s3' 确认>密码提示</span>
+                </li>
+                <li>
+                    <h2>邮箱</h2>
+                    <input type="email" id='email' placeholder='请输入邮箱'>
+                    <span id='s4'>邮箱提示</span>
+                </li>
+                <li>
+                    <h2>手机号码</h2>
+                    <input type="tel" id='phone' placeholder='请输入手机号码'>
+                    <span id='s5'>手机号码提示</span>
+                </li>
+                <li class="sex">
+                    <input type="radio" name='gender' value='1'>男
+                    <input type="radio" name='gender' value='0'>女
+                    <input type="radio" name='gender' value='-1'>保密
+                </li>
+                <li>
+                    <a href="javascript:;" class="reg">注册</a>
+                    <span id='s6'>注册提示</span>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <!-- 网页底部 -->
+    <footer id="footer"></footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/reg.js"></script>
+</body>
+
+</html>

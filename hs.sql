@@ -26,6 +26,10 @@ create table hs_user(
 	#注册时间
 	reg_time DATETIME
 );
+INSERT INTO hs_user VALUES(null,'zhangsan','zhangsan','zhangsan@163.com',15615615615,'张三',1,'2018/1/1');
+INSERT INTO hs_user VALUES(null,'lisi','lisi','lisi@163.com',15615615616,'李四',1,'2018/1/2');
+INSERT INTO hs_user VALUES(null,'xiaohong','xiaohong','xiaohong@163.com',15615615617,'小红',0,'2018/1/3');
+INSERT INTO hs_user VALUES(null,'wangwu','wangwu','wangwu@163.com',15615615618,'王五',1,'2018/1/4');
 
 #2.用户地址表
 create table hs_site(
